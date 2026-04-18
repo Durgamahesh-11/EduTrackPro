@@ -1,70 +1,208 @@
-# Getting Started with Create React App
+# 🚀 EduTrackPro
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+EduTrackPro is a **Digital Student Counseling & Academic Performance Management System** designed to replace the traditional physical counseling book with a secure, role-based digital platform.
 
-## Available Scripts
+It helps institutions manage student records, track academic performance, monitor attendance, and streamline counseling processes efficiently.
 
-In the project directory, you can run:
+---
 
-### `npm start`
+## 🌟 Features
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+### 👨‍🎓 Student
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+* View personal profile & academic records
+* Track attendance and CGPA
+* View performance analytics
+* Access counseling records
+* Manage certifications, projects & activities
 
-### `npm test`
+### 👨‍🏫 Mentor
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+* View assigned students
+* Monitor student performance
+* Identify low attendance / backlogs
+* Access full student records
 
-### `npm run build`
+### 🏫 HOD
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+* Department-wise analytics
+* Section-wise performance insights
+* Identify at-risk students
+* Monitor overall academic trends
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+### 🛠️ Admin
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+* Manage all students across departments
+* View reports & analytics
+* Access counseling data
+* System-wide monitoring
 
-### `npm run eject`
+---
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+## 🧑‍💻 Tech Stack
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+### Frontend
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+* React.js
+* React Router DOM
+* Recharts (for analytics)
+* CSS (Custom UI with gradients)
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+### Backend
 
-## Learn More
+* Node.js
+* Express.js
+* MySQL
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+---
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+## 📁 Project Structure
 
-### Code Splitting
+```bash
+EduTrackPro/
+│
+├── src/                # React frontend source
+├── public/             # Static files
+├── backend/            # Node.js backend
+├── screenshots/        # Project screenshots
+├── .gitignore
+├── package.json
+└── README.md
+```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+---
 
-### Analyzing the Bundle Size
+## 📸 Screenshots
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+> Add your screenshots inside `screenshots/` folder
 
-### Making a Progressive Web App
+### 🔐 Login Page
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+![Login](./screenshots/login-page.png)
 
-### Advanced Configuration
+### 🏠 Dashboard
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+![Dashboard](./screenshots/dashboard.png)
 
-### Deployment
+### 📊 Student Performance
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+![Performance](./screenshots/performance.png)
 
-### `npm run build` fails to minify
+### 👨‍🏫 Mentor Dashboard
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+![Mentor](./screenshots/mentor-dashboard.png)
+
+### 🏫 HOD Dashboard
+
+![HOD](./screenshots/hod-dashboard.png)
+
+### 🛠️ Admin Dashboard
+
+![Admin](./screenshots/admin-dashboard.png)
+
+---
+
+## ⚙️ Installation & Setup
+
+### 1️⃣ Clone the repository
+
+```bash
+git clone https://github.com/Durgamahesh-11/EduTrackPro.git
+cd EduTrackPro
+```
+
+---
+
+### 2️⃣ Install frontend dependencies
+
+```bash
+npm install
+npm start
+```
+
+Runs frontend at:
+👉 http://localhost:3000
+
+---
+
+### 3️⃣ Setup backend
+
+```bash
+cd backend
+npm install
+npm run dev
+```
+
+Runs backend at:
+👉 http://localhost:5000
+
+---
+
+## 🔐 Environment Variables
+
+Create a `.env` file inside `backend/` and add:
+
+```env
+PORT=5000
+DB_HOST=localhost
+DB_USER=root
+DB_PASSWORD=your_password
+DB_NAME=edutrackpro
+JWT_SECRET=your_secret_key
+```
+
+---
+
+## 🔗 API Configuration
+
+In frontend, update API base URL:
+
+```js
+const baseURL = "http://localhost:5000/api";
+```
+
+(For deployment, replace with your backend URL)
+
+---
+
+## 📊 Key Functionalities
+
+* Role-based authentication (Student / Mentor / HOD / Admin)
+* Attendance tracking system
+* CGPA & grade calculation
+* Counseling record management
+* Performance analytics using charts
+* Department & section filtering
+* Alert system for low performance
+
+---
+
+## 🚀 Future Enhancements
+
+* PDF report generation
+* AI-based counseling suggestions
+* Notification system
+* HOD approval workflow
+* Cloud deployment & scaling
+
+---
+
+## 📌 Live Demo
+
+* Frontend: Coming Soon 🚀
+* Backend: Coming Soon 🚀
+
+---
+
+## 👨‍💻 Author
+
+**Durgamahesh**
+📌 MLR Institute of Technology
+
+---
+
+## ⭐ Support
+
+If you like this project, give it a ⭐ on GitHub!
+
+---
