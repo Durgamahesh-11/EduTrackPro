@@ -1,37 +1,44 @@
-require("dotenv").config();
-
 const express = require("express");
 const cors = require("cors");
+const dotenv = require("dotenv");
+
+dotenv.config();
+require("./config/db");
 
 const app = express();
 
-// ✅ Middleware
+app.use(cors());
 app.use(express.json());
+app.use(express.urlencoded({ extended: true }));
 
-app.use(cors({
-  origin: ["http://localhost:3000"], // later add Vercel URL
-  credentials: true
-}));
-
-// ✅ Routes
 const authRoutes = require("./routes/authRoutes");
 const studentRoutes = require("./routes/studentRoutes");
+const attendanceRoutes = require("./routes/attendanceRoutes");
+const performanceRoutes = require("./routes/performanceRoutes");
+const certRoutes = require("./routes/certificationRoutes");
+const counselingRoutes = require("./routes/counselingRoutes");
+const projectRoutes = require("./routes/projectRoutes");
+const activityRoutes = require("./routes/activityRoutes");
 const mentorRoutes = require("./routes/mentorRoutes");
 const hodRoutes = require("./routes/hodRoutes");
 const adminRoutes = require("./routes/adminRoutes");
 
 app.use("/api/auth", authRoutes);
-app.use("/api/student", studentRoutes);
+app.use("/api/students", studentRoutes);
+app.use("/api/attendance", attendanceRoutes);
+app.use("/api/performance", performanceRoutes);
+app.use("/api/certifications", certRoutes);
+app.use("/api/counseling", counselingRoutes);
+app.use("/api/projects", projectRoutes);
+app.use("/api/activities", activityRoutes);
 app.use("/api/mentor", mentorRoutes);
 app.use("/api/hod", hodRoutes);
 app.use("/api/admin", adminRoutes);
 
-// ✅ Root check
 app.get("/", (req, res) => {
-  res.send("EduTrackPro Backend Running 🚀");
+  res.send("Backend Running ✅");
 });
 
-// ✅ Server start
 const PORT = process.env.PORT || 5000;
 
 app.listen(PORT, () => {
