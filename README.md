@@ -98,7 +98,7 @@ EduTrackPro/
 
 ### 🏫 HOD Dashboard
 
-![HOD](./screenshots/hod-dashboard.png)
+![HOD Dashboard](./screenshots/hod-dashboard.jpg)
 
 ### 🛠️ Admin Dashboard
 
