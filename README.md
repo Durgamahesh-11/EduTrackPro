@@ -76,13 +76,17 @@ EduTrackPro/
 
 > Add your screenshots inside `screenshots/` folder
 
+### 🔐 Landing Page
+
+![Landingpage](./screenshots/landing-page.png)
+
 ### 🔐 Login Page
 
 ![Login](./screenshots/login-page.png)
 
 ### 🏠 Dashboard
 
-![Dashboard](./screenshots/dashboard.png)
+![Dashboard](./screenshots/student-dashboard.png)
 
 ### 📊 Student Performance
 
